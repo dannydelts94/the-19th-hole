@@ -1,85 +1,69 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>19th Hole</title>
+    <link rel="stylesheet" href="./script/script.js" />
+    <link rel="stylesheet" href="./css/style.css" />
+
 </head>
 
 <body class="flex-column min-100-vh">
-
     <header class="hero">
-        <h1>Weather Dashboard</h1>
+        <h1>Welcome to the 19th Hole Finder</h1>
     </header>
 
     <!-- TODO: Create Search City Section -->
     <main class="flex-row justify-space-between">
         <div class="col-12 col-md-4">
             <div class="card">
-                <h3 class="card-header text-uppercase">Search By City Name</h3>
+                <h3 class="card-header text-uppercase">Search By Zip Code</h3>
                 <form id="user-form" class="card-body">
-                    <label class="form-label" for="cityName">City Name</label>
-                    <input name="cityName" id="cityName" type="text" autofocus="true" class="form-input" />
+                    <label class="form-label" for="zipCode">Zip Code</label>
+                    <input name="zipCode" id="zipCode" type="text" autofocus="true" class="form-input" />
                     <button type="submit" class="btn">Search</button>
                 </form>
             </div>
 
-            <!-- TODO: Section for historyLocations, when you click on historyLocations button, that locations information replaces currentLocation  -->
+            <!-- TODO: Section for historyLocations, when you click on historyLocations button, that locations information replaces currentZipCode  -->
             <div class="card">
                 <h3 class="card-header text-uppercase"> Recently Searched </h3>
                 <div id="language-buttons" class="card-body">
                     <p> class = locationHistory </p>
-                    <button data-language="CityName1" class="btn">CityName1</button>
-                    <button data-language="CityName2" class="btn">CityName2</button>
-                    <button data-language="CityName3" class="btn">CityName3</button>
+                    <button data-language="zipCode1" class="btn">zipCode1</button>
+                    <button data-language="zipCode2" class="btn">zipCode2</button>
+                    <button data-language="zipCode3" class="btn">zipCode3</button>
                 </div>
             </div>
 
 
 
-            <!-- TODO: Section for Current City -->
-            <!-- City | Temp: --°F | Wind: --mph | Humidity: --% | CurrentDate-->
-            <div class="card">
-                <h3 class="card-header text-uppercase"> cityName = Philadelphia - dateTime = today </h3>
-                <p> [weatherIcon] | Temp: --°F | Wind: --mph | Humidity: --% |
-                </p>
+            <!-- TODO: Section for Golf Courses -->
+                      <div class="card">
+                <h3 class="card-header text-uppercase"> Golf Courses </h3>
+                <p> Golf Course  Location 1  </p>
+                <p> Golf Course  Location 2  </p>
+                <p> Golf Course  Location 3  </p>
+                <p> Golf Course  Location 4  </p>
+                <p> Golf Course  Location 5  </p>
+                
             </div>
 
 
-            <!-- TODO: Section for 5-day forecast -->
+            <!-- TODO: Section for Distributors -->
             <!-- cards for each date with date, weather icon, temp wind and humidity -->
             <div class="card">
-                <h3 class="card-header text-uppercase"> 5-Day Forecast </h3>
-                <p> card 1 = [weatherIcon] | Temp: --°F | Wind: --mph | Humidity: --% |
-                </p>
-                <p> card 2 = [weatherIcon] | Temp: --°F | Wind: --mph | Humidity: --% |
-                </p>
-                <p> card 3 = [weatherIcon] | Temp: --°F | Wind: --mph | Humidity: --% |
-                </p>
-                <p> card 4 = [weatherIcon] | Temp: --°F | Wind: --mph | Humidity: --% |
-                </p>
-                <p> card 5 = [weatherIcon] | Temp: --°F | Wind: --mph | Humidity: --% |
+                <h3 class="card-header text-uppercase"> Distributors</h3>
+                <p> Distributor  Location 1  </p>
+                <p> Distributor  Location 2  </p>
+                <p> Distributor  Location 3  </p>
+                <p> Distributor  Location 4  </p>
+                <p> Distributor  Location 5  </p>
                 </p>
 
-
-
-
-                <script src="./assets/jss/script.js"></script>
+                <script src="./script/script.js"></script>
             </div>
         </div>
     </main>
