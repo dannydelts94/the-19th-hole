@@ -1,7 +1,5 @@
-body {
-    background-color:lightyellow;
-}
-
-.card {
-    background-color: lightgray ;
+#map {
+    width:100%;
+    height: 400px;
+    background-color: grey;
 }
