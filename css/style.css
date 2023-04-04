@@ -6,6 +6,7 @@
 } */
 
 body {
+    background-color:lightyellow;
     background-color:rgb(95, 162, 23);
 }
 body, html {
@@ -13,6 +14,7 @@ body, html {
 }
 
 .card {
+    background-color: lightgray ;
     background-color: rgb(78, 221, 12) ;
 }
 .hero-image {
@@ -34,5 +36,4 @@ body, html {
   }
 h1 {
     font-size: xx-large;
-
 }
