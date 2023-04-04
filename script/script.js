@@ -29,8 +29,6 @@ function initMap() {
     service.textSearch(request, function (results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             console.log(results)
-
-
         }
     });
 
