@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>19th Hole</title>
-
-     <link rel="stylesheet" href="./css/style.css" />
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./script/script.js" />
     <link rel="stylesheet" href="./css/style.css" />
 
-
 </head>
 
 <body class="flex-column min-100-vh">
+    <header class="hero">
+        <h1>Welcome to the 19th Hole Finder</h1>
+    </header>
     <div class="hero-image">
         <div class="hero-text">
           <h1 class="title is-1 has-text-danger">The 19th Hole 🏌️‍♂️ ⛳</h1>
@@ -24,7 +22,7 @@
         </div>
       </div>
 
-
+    <!-- TODO: Create Search City Section -->
     <main class="flex-row justify-space-between">
         <div class="col-12 col-md-4">
             <div class="card">
@@ -35,7 +33,6 @@
                     <button type="submit" class="btn">Search</button>
                 </form>
             </div>
-
             <!-- TODO: Section for historyLocations, when you click on historyLocations button, that locations information replaces currentZipCode  -->
             <div class="card">
                 <h3 class="card-header text-uppercase"> Recently Searched </h3>
@@ -46,43 +43,30 @@
                     <button data-language="zipCode3" class="btn">zipCode3</button>
                 </div>
             </div>
-
-
-
             <!-- TODO: Section for Golf Courses -->
-            <div class="card">
+                      <div class="card">
                 <h3 class="card-header text-uppercase"> Golf Courses </h3>
-                <p> Golf Course Location 1 </p>
-                <p> Golf Course Location 2 </p>
-                <p> Golf Course Location 3 </p>
-                <p> Golf Course Location 4 </p>
-                <p> Golf Course Location 5 </p>
-
+                <p> Golf Course  Location 1  </p>
+                <p> Golf Course  Location 2  </p>
+                <p> Golf Course  Location 3  </p>
+                <p> Golf Course  Location 4  </p>
+                <p> Golf Course  Location 5  </p>
+                
             </div>
-
-
             <!-- TODO: Section for Distributors -->
             <!-- cards for each date with date, weather icon, temp wind and humidity -->
             <div class="card">
                 <h3 class="card-header text-uppercase"> Distributors</h3>
-                <!-- Google Maps API Setup -->
-                <!-- TODO: ADD API KEY -->
-               <div id="map"></div> 
-               <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvkyAdjBQH3vAj-sgu48B50PM2q6ADAAY&callback=initMap"></script> -->
-               
                 <p> Distributor  Location 1  </p>
                 <p> Distributor  Location 2  </p>
                 <p> Distributor  Location 3  </p>
                 <p> Distributor  Location 4  </p>
                 <p> Distributor  Location 5  </p>
+                </p>
+                <script src="./script/script.js"></script>
             </div>
-
-            <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvkyAdjBQH3vAj-sgu48B50PM2q6ADAA&libraries=places&callback=initMap"></script>
-            <script src="./script/script.js"></script>
         </div>
     </main>
 </body>
-
 <footer>
-
 </footer>
