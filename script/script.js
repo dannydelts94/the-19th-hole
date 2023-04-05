@@ -66,10 +66,10 @@ function initMap(lat, lon) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             console.log(results)
 
-            // TODO: ADD FOR LOOP
-            for (request i = 0; i < 5; i++) {
-                results = results * i;
-            }
+        //     // TODO: ADD FOR LOOP
+        //     for (request i = 0; i < 5; i++) {
+        //         results = results * i;
+        //     }
 
         }
     });
