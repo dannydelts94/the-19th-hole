@@ -1,21 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>19th Hole</title>
-
-     <link rel="stylesheet" href="./css/style.css" />
+    <title>19th Hole Finder</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./script/script.js" />
     <link rel="stylesheet" href="./css/style.css" />
 
-
 </head>
 
 <body class="flex-column min-100-vh">
     <header class="hero">
+        <h1>Welcome to the 19th Hole Finder</h1>
+        <p></p>
     </header>
     <div class="hero-image">
         <div class="hero-text">
@@ -25,36 +27,36 @@
         </div>
       </div>
 
-    <!-- TODO: Create Search City Section -->
-    <main class="flex-row justify-space-between">
-        <div class="col-12 col-md-4">
-            <div class="card">
-                <h3 class="card-header text-uppercase">Search By Zip Code</h3>
-                <form id="user-form" class="card-body">
-                    <label class="form-label" for="zipCode">Zip Code</label>
-                    <input name="zipCode" id="zipCode" type="text" autofocus="true" class="form-input" />
-                    <button type="submit" class="btn">Search</button>
-                </form>
-            </div>
-            <!-- TODO: Section for historyLocations, when you click on historyLocations button, that locations information replaces currentZipCode  -->
-            <div class="card">
-                <h3 class="card-header text-uppercase"> Recently Searched </h3>
-                <div id="language-buttons" class="card-body">
-                    <p> class = locationHistory </p>
-                    <button data-language="zipCode1" class="btn">zipCode1</button>
-                    <button data-language="zipCode2" class="btn">zipCode2</button>
-                    <button data-language="zipCode3" class="btn">zipCode3</button>
-                </div>
-            </div>
-            <!-- TODO: Section for Golf Courses -->
-            <div class="card">
-                <h3 class="card-header text-uppercase"> Golf Courses </h3>
-                <p> Golf Course Location 1 </p>
-                <p> Golf Course Location 2 </p>
-                <p> Golf Course Location 3 </p>
-                <p> Golf Course Location 4 </p>
-                <p> Golf Course Location 5 </p>
-            </div>
+
+    <!-- Search by Zip Code Section -->
+    <section id="search-by-zip">
+        <h2>Search by Zip Code</h2>
+        <form>
+            <label for="zip">Enter Zip Code:</label>
+            <input type="text" id="zip" name="zip" />
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <!-- Recently Searched Section -->
+    <section id="recent-searches">
+        <h2>Recently Searched</h2>
+        <div id="search-history">
+    
+            <button id="history-locations-btn">History Locations</button>
+
+     </section>
+
+        <div id="golf-courses">
+            <h3>Golf Courses</h3>
+            <ul>
+                <li>Course 1</li>
+                <li>Course 2</li>
+                <li>Course 3</li>
+                <li>Course 4</li>
+                <li>Course 5</li>
+
+            </ul>
             <!-- TODO: Section for Distributors -->
             <!-- cards for each date with date, weather icon, temp wind and humidity -->
             <div class="card">
@@ -64,16 +66,16 @@
                <div id="map"></div> 
                <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvkyAdjBQH3vAj-sgu48B50PM2q6ADAAY&callback=initMap"></script> -->
                
-                <p> Distributor  Location 1  </p>
-                <p> Distributor  Location 2  </p>
-                <p> Distributor  Location 3  </p>
-                <p> Distributor  Location 4  </p>
-                <p> Distributor  Location 5  </p>
-            </div>
-            <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvkyAdjBQH3vAj-sgu48B50PM2q6ADAA&libraries=places&callback=initMap"></script>
-            <script src="./script/script.js"></script>
+            <ul>
+                <li>Distributor 1</li>
+                <li>Distributor 2</li>
+                <li>Distributor 3</li>
+                <li>Distributor 4</li>
+                <li>Distributor 5</li>
+            </ul>
+            
         </div>
-    </main>
-</body>
-<footer>
-</footer>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvkyAdjBQH3vAj-sgu48B50PM2q6ADAA&libraries=places&callback=initMap"></script>
+            <script src="./script/script.js"></script>
+  
+    </section>
