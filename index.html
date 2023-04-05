@@ -16,20 +16,29 @@
 
 <body class="flex-column min-100-vh">
     <header class="hero">
-        <h1>Welcome to the 19th Hole Finder</h1>
         <p></p>
     </header>
     <div class="hero-image">
         <div class="hero-text">
             <h1 class="title is-1 has-text-danger">The 19th Hole 🏌️‍♂️ ⛳</h1>
             <p>A silly goose web app for golfers who want to drink beer and drive golf balls</p>
+            <h1 class="title is-1 has-text-danger">The 19th Hole 🏌️‍♂️ ⛳</h1>
+            <p>A silly goose web app for golfers who want to drink beer and drive golf balls</p>
             <button class="button is-success is-rounded">Drink N Drive</button>
         </div>
     </div>
+    </div>
 
 
-    <!-- Search by Zip Code Section -->
     <section id="search-by-zip">
+        <form class="box">
+            <div class="field">
+                <label class="label" for="zip">Search by Zip Code</label>
+                <div class="control">
+                    <input class="input" type="text" id="zip" style="width: 33%;" placeholder="e.g. 90210" />
+                    <button class="button is-success is-rounded" type="submit">Search</button>
+                </div>
+            </div>
         <h2>Search by Zip Code</h2>
         <!-- TODO: added id formSubmit -->
         <form id="formSubmit">
@@ -39,16 +48,28 @@
             <button class="btn" id="submit">Search</button>
         </form>
     </section>
-
-    <!-- Recently Searched Section -->
     <section id="recent-searches">
-        <h2>Recently Searched</h2>
-        <div id="search-history">
-
-            <button id="history-locations-btn">History Locations</button>
-
+        <form class="box">
+            <div class="search-history">
+                <label class="label" for="history">Location History</label>
+                <div class="control">
+                    <button class="button is-success is-rounded" id="history-locations-btn">Location History</button>
+                </div>
+            </div>
+        </form>
     </section>
 
+    <section id="golf-courses">
+        <form class="box">
+            <div class="golf-courses">
+                <label class="label" for="courses">Golf Courses</label>
+                <div class="control">
+                    <ul>
+                        <li>Course 1</li>
+                        <li>Course 2</li>
+                        <li>Course 3</li>
+                        <li>Course 4</li>
+                        <li>Course 5</li>
     <div id="golf-courses">
         <h3>Golf Courses</h3>
         <ul>
@@ -83,3 +104,35 @@
         <script src="./script/script.js"></script>
 
         </section>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <Section id="distributors">
+        <form class="box">
+            <!-- Google Maps API Setup -->
+            <!-- TODO: ADD API KEY -->
+            <div id="map"></div>
+            <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvkyAdjBQH3vAj-sgu48B50PM2q6ADAAY&callback=initMap"></script> -->
+            <div class="distributors">
+                <label class="label" for="distributors">🍺 Distributors</label>
+                <div class="control"></div>
+                <ul>
+                    <li>Distributor 1</li>
+                    <li>Distributor 2</li>
+                    <li>Distributor 3</li>
+                    <li>Distributor 4</li>
+                    <li>Distributor 5</li>
+                </ul>
+
+            </div>
+            </div>
+        </form>
+        <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvkyAdjBQH3vAj-sgu48B50PM2q6ADAA&libraries=places&callback=initMap"></script>
+        <script src="./script/script.js"></script>
+
+    </section>
+</body>
