@@ -85,16 +85,6 @@ function initMap(lat, lon) {
 }
 
 
-
-
-
-// TODO: Event listener for submit button
-$("#formSubmit").on("submit", function (event) {
-  event.preventDefault();
-
-  var zipCode = $("#zip").val();
-  console.log(zipCode);
-})
 // adding variables to get the search. Save var needs to be updated
 
 
