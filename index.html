@@ -9,12 +9,12 @@
     <title>19th Hole Finder</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./script/script.js" />
     <link rel="stylesheet" href="./css/style.css" />
 
 </head>
 
 <body class="flex-column min-100-vh">
+    <!-- header section -->
     <header class="hero">
         <p></p>
     </header>
@@ -25,18 +25,20 @@
         </div>
     </div>
 
-
+<!-- form for zipcode -->
     <section id="search-by-zip">
-        <form class="box">
+        <form class="box" id="formSubmit">
             <div class="field">
                 <label class="label" for="zip">Search by Zip Code</label>
                 <div class="control">
                     <input class="input" type="text" id="zip" style="width: 33%;" placeholder="e.g. 90210" />
-                    <button class="button is-success is-rounded" type="submit">Search</button>
+                    <button class="button is-success is-rounded" id="submit">Search</button>
                 </div>
             </div>
         </form>
     </section>
+
+    <!-- recent searches -->
     <section id="recent-searches">
         <form class="box">
             <div class="search-history">
@@ -48,6 +50,7 @@
         </form>
     </section>
 
+    <!-- golf courses section -->
     <section id="golf-courses">
         <form class="box">
             <div class="golf-courses">
@@ -71,7 +74,6 @@
             <!-- Google Maps API Setup -->
             <!-- TODO: ADD API KEY -->
             <div id="map"></div>
-            <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvkyAdjBQH3vAj-sgu48B50PM2q6ADAAY&callback=initMap"></script> -->
             <div class="distributors">
                 <label class="label" for="distributors">🍺 Distributors</label>
                 <div class="control"></div>
@@ -86,6 +88,7 @@
             </div>
             </div>
         </form>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfvkyAdjBQH3vAj-sgu48B50PM2q6ADAA&libraries=places&callback=initMap"></script>
         <script src="./script/script.js"></script>
