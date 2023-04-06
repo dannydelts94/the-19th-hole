@@ -123,6 +123,24 @@ function initMap(lat, lon) {
     })
 }
 
+// TODO:LOCAL STORAGE 
+$(function () {
+    // adding the time and note to local storage when selecting save
+      $(".saveBtn").on("click", function(){
+        var note = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+    
+        localStorage.setItem(time, note);
+      })
+    })
+    
+//  get back from the local storage and loading back to text areas
+for(var i=9; i<=17;i++)
+{
+  $("#"+i+" .description").val(localStorage.getItem(i));
+}
+
+
 
 // -----------------DREWS UPDATES----------------------------//
 // adding variables to get the search. Save var needs to be updated
