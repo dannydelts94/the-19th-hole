@@ -93,6 +93,7 @@ function initMap(lat, lon) {
     service.textSearch(request2, function (results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             console.log(results)
+            
             // TODO: ADD FOR LOOP - max 5
 
             document.getElementById("distributorsCards").innerHTML = "";
@@ -102,10 +103,13 @@ function initMap(lat, lon) {
 
                 var distName = document.createElement("h2")
                 distName.textContent = results[i].name;
+
                 var distAddress = document.createElement("h2")
                 distAddress.textContent = results[i].formatted_address;
+
                 // var golfImgURL = document.createElement("h2")
                 // golfImgURL.textContent = results[i].icon;
+
                 var distcards = document.createElement("div");
                 distcards.setAttribute("class", "distributorsCards");
                 distcards.append(distName, distAddress);
