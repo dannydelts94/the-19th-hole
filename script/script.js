@@ -93,7 +93,7 @@ function initMap(lat, lon) {
     service.textSearch(request2, function (results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             console.log(results)
-            
+
             // TODO: ADD FOR LOOP - max 5
 
             document.getElementById("distributorsCards").innerHTML = "";
@@ -122,6 +122,7 @@ function initMap(lat, lon) {
 
     })
 }
+
 
 // -----------------DREWS UPDATES----------------------------//
 // adding variables to get the search. Save var needs to be updated
