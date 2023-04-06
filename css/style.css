@@ -59,7 +59,7 @@ h1 {
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    
 }
-h2 {
+.golfcards {
     background-color: #D4F1C5;
     border: 2px solid #83C07C;
     border-radius: 5px;
@@ -68,3 +68,4 @@ h2 {
     color: #333;
         
 }
+
