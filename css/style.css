@@ -59,4 +59,10 @@ h1 {
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    
 }
-
+h2 {
+    border: 2px solid red;
+    border-radius: 12px;
+    padding: 5px;
+  
+    
+}
