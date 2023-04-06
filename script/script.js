@@ -107,7 +107,7 @@ function initMap(lat, lon) {
                 // var golfImgURL = document.createElement("h2")
                 // golfImgURL.textContent = results[i].icon;
                 var distcards = document.createElement("div");
-               distcards.setAttribute("class", "distributorsCards");
+                distcards.setAttribute("class", "distributorsCards");
                 distcards.append(distName, distAddress);
 
                 document.getElementById("distributorsCards").append(distcards);
