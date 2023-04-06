@@ -6,8 +6,8 @@ var APIKeyWeather = "383165bf31a4af053f333f929519989c";
 
 
 // TODO: Event listener for submit button
-$("#formSubmit").on("submit", function (event) {
-    event.preventDefault();
+$("#formSubmit").on("submit", function (e) {
+    e.preventDefault();
 
     var zipCode = $("#zip").val();
     getCoord(zipCode);
@@ -34,6 +34,7 @@ function getCoord(zipCode) {
 
         })
 }
+
 
 
 
@@ -66,10 +67,24 @@ function initMap(lat, lon) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             console.log(results)
 
-        //     // TODO: ADD FOR LOOP
-        //     for (request i = 0; i < 5; i++) {
-        //         results = results * i;
-        //     }
+            document.getElementById("golfcards").innerHTML = "";
+
+            // TODO: ADD FOR LOOP
+            for (var i = 0; i < results.length - 15; i++) {
+                console.log(results[i]);
+
+                var golfName = document.createElement("h2")
+                golfName.textContent = results[i].name;
+                var golfAddress = document.createElement("h2")
+                golfAddress.textContent = results[i].formatted_address;
+                // var golfImgURL = document.createElement("h2")
+                // golfImgURL.textContent = results[i].icon;
+                var golfcards = document.createElement("div");
+                golfcards.setAttribute("class", "golfcards");
+                golfcards.append(golfName, golfAddress);
+
+                document.getElementById("golfcards").append(golfcards);
+            }
 
         }
     });
@@ -84,43 +99,29 @@ function initMap(lat, lon) {
     })
 }
 
-
+// -----------------DREWS UPDATES----------------------------//
 // adding variables to get the search. Save var needs to be updated
 
 
 // todo: update save var, add classes in to code once Bulma CSS is done
 const zipCode = document.querySelector('#zip')
 var submitForm = document.querySelector('#formSubmit')
-console.log(zipCode,submitForm);
+console.log(zipCode, submitForm);
 
 
 
 // gets the data from the API based off zip code
-submitForm.addEventListener('submit', function(event){
-  event.preventDefault()
-  var inputvalue= zipCode.value;
-  console.log(inputvalue);
-  fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'+ inputvalue +'?key=BC56DV38KGW5TK327XDYHBPXD')
-  .then(function(response){
+submitForm.addEventListener('submit', function (event) {
+    event.preventDefault()
+    var inputvalue = zipCode.value;
+    console.log(inputvalue);
+    fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/' + inputvalue + '?key=BC56DV38KGW5TK327XDYHBPXD')
+        .then(function (response) {
 
-   return response.json()
-  }).then(function(data) {
-   console.log(data)
-  })
+            return response.json()
+        }).then(function (data) {
+            console.log(data)
+        })
 })
 
 console.log(inputvalue)
-
-// function getWeather(inputvalue) {
-// console.log(data) 
-
-
-// }
-
-//   getWeather()
-    
-  
-// searchButton.addEventListener('click', function (event) {
-//   console.log(storedZip.value)
-// getWeather(zipSearch.value)
-// })
