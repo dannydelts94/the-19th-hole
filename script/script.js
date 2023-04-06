@@ -157,11 +157,11 @@ function getWeather(zipCode)
             var weatherStatus = document.createElement("h2");
             weatherStatus.textContent="Conditions: "+ results.currentConditions.conditions;
             var weatherName = document.createElement("h2");
-            weatherName.textContent="Humidity: "+ results.currentConditions.humidity + " degrees";
+            weatherName.textContent="Humidity: "+ results.currentConditions.humidity + " %";
             var weatherTemp = document.createElement("h2");
-            weatherTemp.textContent="Feels like "+ results.currentConditions.feelslike +  "°F";
+            weatherTemp.textContent="Feels like "+ results.currentConditions.feelslike +  " °F";
             var weatherWind = document.createElement("h2");
-            weatherWind.textContent="Wind speed: "+ results.currentConditions.windspeed + "MPH";
+            weatherWind.textContent="Wind speed: "+ results.currentConditions.windspeed + " mph";
             var weatherCards = document.createElement("div");
             weatherCards.setAttribute("class", "weatherCards");
             weatherCards.append(weatherName);
