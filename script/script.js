@@ -134,6 +134,7 @@ console.log(zipCode, submitForm);
 
 
 
+
 // gets the data from the API based off zip code
 submitForm.addEventListener('submit', function (event) {
     event.preventDefault()
@@ -143,9 +144,64 @@ submitForm.addEventListener('submit', function (event) {
         .then(function (response) {
 
             return response.json()
-        }).then(function (data) {
-            console.log(data)
+        }).then(function (results) {
+            console.log(results)
+
+            document.getElementById("weatherCards").innerHTML = "";
+
+            // for (results[0]);
+
+            var weatherStatus = document.createElement("h2");
+            weatherStatus.textContent="Conditions: "+ results.currentConditions.conditions;
+
+            var weatherName = document.createElement("h2");
+            weatherName.textContent="Humidity: "+ results.currentConditions.humidity + " degrees";
+
+            var weatherTemp = document.createElement("h2");
+            weatherTemp.textContent="Feels like "+ results.currentConditions.feelslike +  "°F";
+
+            var weatherWind = document.createElement("h2");
+            weatherWind.textContent="Wind speed: "+ results.currentConditions.windspeed + "MPH";
+
+          
+
+
+            var weatherCards = document.createElement("div");
+            weatherCards.setAttribute("class", "weatherCards");
+            weatherCards.append(weatherName);
+            weatherCards.append(weatherTemp);
+            weatherCards.append(weatherWind);
+            weatherCards.append(weatherStatus);
+
+            document.getElementById("weatherCards").append(weatherCards);
         })
+
 })
 
-console.log(inputvalue)
+// document.getElementById("weatherCards").innerHTML = "";
+
+// // for (results[0]);
+
+//     var weatherName = document.createElement("h2");
+//     weatherName.textContent = results[0].name;
+
+//     var weatherCards = document.createElement("div");
+//     weatherCards.setAttribute("class", "weatherCards");
+//     weatherCards.append(weatherName);
+
+//     document.getElementById("weatherCards").append(weatherCards);
+
+// }
+// variables to select the tags on the HTML
+// var name=document.querySelector("#name");
+// var wind=document.querySelector('#wind');
+// var humidity=document.querySelector('#humidity');
+// var temp =document.querySelector('#humidity');
+
+// // code to get the data on the page
+// function renderWeather(data)  {
+// console.log(data)
+
+// temp.textContent="temp: "+ data.list[0].main.temp +" degrees"
+// wind.textContent="wind: "+ data.list[0].wind.speed +" mph"
+// humidity.textContent="humidity: "+ data.list[0].main.humidity + " %"
