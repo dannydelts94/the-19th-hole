@@ -102,9 +102,7 @@ function initMap(lat, lon) {
     })
 }
 
-// Stored Data - get Zipcode from Local Storage
-
-
+// Store Data
 $(document).on("click", ".zip", function(e){
     e.preventDefault();
     var zip = $(this).attr("data-zip");
@@ -152,8 +150,8 @@ function getWeather(zipCode)
             return response.json()
         }).then(function (results) {
             console.log(results)
+            // append weather
             document.getElementById("weatherCards").innerHTML = "";
-            // for (results[0]);
             var weatherStatus = document.createElement("h2");
             weatherStatus.textContent="Conditions: "+ results.currentConditions.conditions;
             var weatherName = document.createElement("h2");
@@ -173,10 +171,7 @@ function getWeather(zipCode)
 }
 
 
-
-// -----------------DREWS UPDATES----------------------------//
 // adding variables to get the search. Save var needs to be updated
-// todo: update save var, add classes in to code once Bulma CSS is done
 const zipCode = document.querySelector('#zip')
 var submitForm = document.querySelector('#formSubmit')
 console.log(zipCode, submitForm);
