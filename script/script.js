@@ -94,6 +94,26 @@ function initMap(lat, lon) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             console.log(results)
             // TODO: ADD FOR LOOP - max 5
+
+            document.getElementById("distributorsCards").innerHTML = "";
+
+            for (var i = 0; i < results.length - 15; i++) {
+                console.log(results[i]);
+
+                var distName = document.createElement("h2")
+                distName.textContent = results[i].name;
+                var distAddress = document.createElement("h2")
+                distAddress.textContent = results[i].formatted_address;
+                // var golfImgURL = document.createElement("h2")
+                // golfImgURL.textContent = results[i].icon;
+                var distcards = document.createElement("div");
+               distcards.setAttribute("class", "distributorsCards");
+                distcards.append(distName, distAddress);
+
+                document.getElementById("distributorsCards").append(distcards);
+            }
+
+
         }
 
     })
